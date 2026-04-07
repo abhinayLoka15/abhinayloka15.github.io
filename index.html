@@ -229,9 +229,14 @@
         <button id="close-modal" class="absolute -top-12 right-0 text-white text-2xl">✕</button>
         
         <!-- Video Player -->
-        <video id="modal-video" class="w-full rounded-xl" controls>
-            <source id="modal-source" src="" type="video/mp4">
-        </video>
+        <iframe 
+    id="modal-iframe"
+    class="w-full h-[60vh] rounded-xl"
+    src=""
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+</iframe>
         
     </div>
 </div>
@@ -370,7 +375,7 @@
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-10">
-                    <div class="project-card reveal" data-video="meelo.mp4">
+                    <div class="project-card reveal" data-youtube="https://www.youtube.com/embed/MYEtNoxbRS8">
                         <video class="w-full h-full object-cover" muted loop playsinline poster="meelopost.jpeg">
                             <source src="meelo.mp4" type="video/mp4">
                         </video>
@@ -416,13 +421,21 @@
         <section id="contact" class="items-center justify-center text-center">
             <div class="reveal">
                 <h2 class="text-7xl font-bold mb-8">Let's Create.</h2>
-                <a href="mailto:muralidhar@loka15.com" class="text-2xl text-gray-400 hover:text-white transition-colors border-b border-white/10 pb-2">
-                    muralidhar@loka15.com
+                <a href="mailto:contact@loka15.com" class="text-2xl text-gray-400 hover:text-white transition-colors border-b border-white/10 pb-2">
+                    contact@loka15.com
                 </a>
                 <div class="mt-20 flex gap-8 justify-center opacity-40">
-                    <span class="text-xs uppercase tracking-widest cursor-pointer hover:opacity-100">Instagram</span>
-                    <span class="text-xs uppercase tracking-widest cursor-pointer hover:opacity-100">LinkedIn</span>
-                    <span class="text-xs uppercase tracking-widest cursor-pointer hover:opacity-100">Vimeo</span>
+
+                    <a href="https://www.instagram.com/loka15studios?igsh=ZXE1M3Vhb2tleDhz" target="_blank"
+                       class="text-xs uppercase tracking-widest cursor-pointer hover:opacity-100">
+                       Instagram
+                    </a>
+                
+                    <a href="https://www.linkedin.com/company/loka15/" target="_blank"
+                       class="text-xs uppercase tracking-widest cursor-pointer hover:opacity-100">
+                       LinkedIn
+                    </a>
+                
                 </div>
             </div>
         </section>
@@ -673,37 +686,36 @@
         animate();
     // VIDEO MODAL FUNCTIONALITY
 const modal = document.getElementById('video-modal');
-const modalVideo = document.getElementById('modal-video');
-const modalSource = document.getElementById('modal-source');
+const iframe = document.getElementById('modal-iframe');
 const closeModal = document.getElementById('close-modal');
 
 const cards = document.querySelectorAll('.project-card');
 
 cards.forEach(card => {
     card.addEventListener('click', () => {
-    const videoSrc = card.getAttribute('data-video');
-    
-    modalSource.src = videoSrc;
-    modalVideo.load();
+        const ytLink = card.getAttribute('data-youtube');
 
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
+        // Only run for YouTube cards
+        if (!ytLink) return;
 
-    document.body.classList.add('modal-active'); // ✅ ADD HERE
+        iframe.src = ytLink + "?autoplay=1";
 
-    modalVideo.play();
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
 
-    gsap.fromTo(modalVideo, 
-        { scale: 0.8, opacity: 0 }, 
-        { scale: 1, opacity: 1, duration: 0.5, ease: "power3.out" }
-    );
-});
+        document.body.classList.add('modal-active');
+
+        gsap.fromTo(iframe, 
+            { scale: 0.8, opacity: 0 }, 
+            { scale: 1, opacity: 1, duration: 0.5, ease: "power3.out" }
+        );
+    });
 });
 
 closeModal.addEventListener('click', () => {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
-    modalVideo.pause();
+    iframe.src = "";
 
     document.body.classList.remove('modal-active'); // ✅ ADD HERE
 });
@@ -713,7 +725,7 @@ modal.addEventListener('click', (e) => {
     if (e.target === modal) {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
-        modalVideo.pause();
+        iframe.src = ""; // stops YouTube video
 
         document.body.classList.remove('modal-active'); // ✅ ADD HERE
     }
@@ -746,7 +758,7 @@ taktakCard.addEventListener('click', () => {
     // ❌ CLOSE VIDEO MODAL IF OPEN
     modal.classList.add('hidden');
     modal.classList.remove('flex');
-    modalVideo.pause();
+    iframe.src = "";
 
     // ✅ OPEN GALLERY
     currentIndex = 0;
@@ -766,7 +778,7 @@ closeGallery.addEventListener('click', () => {
     document.body.classList.remove('modal-active');
 
     // ✅ Ensure video modal is not lingering
-    modalVideo.pause();
+    iframe.src = "";
 });
 
 // NEXT
