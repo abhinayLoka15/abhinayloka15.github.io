@@ -241,15 +241,19 @@
 
         .toc-link {
             display: block;
-            transition: color 0.3s;
+            padding: 6px 10px;
+            border-radius: 8px;
+            transition: all 0.3s;
         }
 
         .toc-link:hover {
+            background: rgba(255, 255, 255, 0.05);
             color: white;
         }
+
         .modal-active {
-    overflow: hidden;
-}
+            overflow: hidden;
+        }
     </style>
 </head>
 <!-- VIDEO MODAL -->
@@ -284,8 +288,7 @@
 </div>
 
 <!-- PRIVACY POLICY MODAL -->
-<div id="privacy-modal"
-class="fixed inset-0 bg-black/90 backdrop-blur-2xl hidden z-[1000] overflow-y-auto">
+<div id="privacy-modal" class="fixed inset-0 bg-black/90 backdrop-blur-2xl hidden z-[1000] overflow-y-auto">
 
     <!-- Close -->
     <button id="close-privacy" class="absolute top-8 right-10 text-white text-3xl z-10">✕</button>
@@ -312,152 +315,164 @@ class="fixed inset-0 bg-black/90 backdrop-blur-2xl hidden z-[1000] overflow-y-au
         <!-- RIGHT CONTENT -->
         <div class="flex-1 overflow-y-auto pt-24 pb-16 px-6 md:px-16 flex justify-center">
 
-            <div class="w-full max-w-3xl text-gray-300 space-y-6 text-sm md:text-base leading-7">
-            
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy for Loka15 Studios Platform</h1>
-            <p class="text-gray-500">Last Updated: November 4, 2025</p>
-            
-            <section id="p1">
-            <h2 class="text-xl text-white font-semibold">1. Introduction and Legal Basis</h2>
-            <p>Welcome to Loka15 Studios ("we", "us", or "our"). We operate the Loka15 Studios Platform, an AI-powered content creation service.</p>
-            <p>We are committed to processing your personal data in compliance with the Digital Personal Data Protection (DPDP) Act, 2023 of India.</p>
-            
-            <ul class="list-disc pl-6 space-y-2 mt-3">
-            <li><strong>Data Fiduciary:</strong> Loka15 Studios</li>
-            <li><strong>Data Principal:</strong> You, the user</li>
-            <li><strong>Consent:</strong> By using our service, you provide informed consent.</li>
-            </ul>
-            </section>
-            
-            <section id="p2">
-            <h2 class="text-xl text-white font-semibold">2. Personal Data We Collect</h2>
-            
-            <h3 class="text-white mt-4 font-medium">A. Account and Identity Data</h3>
-            <ul class="list-disc pl-6">
-            <li>Name, email, username, password</li>
-            <li>Profile details and preferences</li>
-            <li>Contact and professional info</li>
-            </ul>
-            
-            <h3 class="text-white mt-4 font-medium">B. Billing and Payment Data</h3>
-            <ul class="list-disc pl-6">
-            <li>Payment details via third-party processors</li>
-            <li>Transaction history and subscription data</li>
-            </ul>
-            
-            <h3 class="text-white mt-4 font-medium">C. Content and Usage Data</h3>
-            <ul class="list-disc pl-6">
-            <li>Generated images/videos</li>
-            <li>Prompts and uploaded content</li>
-            <li>Usage analytics and chat logs</li>
-            </ul>
-            
-            <h3 class="text-white mt-4 font-medium">D. Technical Information</h3>
-            <ul class="list-disc pl-6">
-            <li>IP address, location</li>
-            <li>Device and system data</li>
-            </ul>
-            
-            <h3 class="text-white mt-4 font-medium">E. Third-Party Integrations</h3>
-            <ul class="list-disc pl-6">
-            <li>LinkedIn, Google, social logins</li>
-            </ul>
-            </section>
-            
-            <section id="p3">
-            <h2 class="text-xl text-white font-semibold">3. How We Use Your Information</h2>
-            <ul class="list-disc pl-6 space-y-2">
-            <li>Service delivery and AI generation</li>
-            <li>Billing and compliance</li>
-            <li>Platform improvement</li>
-            <li>Communication and support</li>
-            <li>Legal and fraud protection</li>
-            </ul>
-            </section>
-            
-            <section id="p4">
-            <h2 class="text-xl text-white font-semibold">4. AI Model Training and Content Handling</h2>
-            <ul class="list-disc pl-6 space-y-2">
-            <li>Your content remains your property</li>
-            <li>No training without explicit consent</li>
-            <li>Content moderation for safety</li>
-            </ul>
-            </section>
-            
-            <section id="p5">
-            <h2 class="text-xl text-white font-semibold">5. Data Sharing and Disclosure</h2>
-            <ul class="list-disc pl-6 space-y-2">
-            <li>Payment processors</li>
-            <li>Cloud infrastructure</li>
-            <li>Analytics services</li>
-            <li>Legal authorities</li>
-            <li>Business transfers</li>
-            </ul>
-            </section>
-            
-            <section id="p6">
-            <h2 class="text-xl text-white font-semibold">6. Your Rights and Duties</h2>
-            
-            <h3 class="text-white mt-4 font-medium">Your Rights</h3>
-            <ul class="list-disc pl-6">
-            <li>Access your data</li>
-            <li>Correction & erasure</li>
-            <li>Withdraw consent</li>
-            <li>Grievance redressal</li>
-            </ul>
-            
-            <h3 class="text-white mt-4 font-medium">Your Duties</h3>
-            <ul class="list-disc pl-6">
-            <li>Provide authentic information</li>
-            <li>Avoid impersonation</li>
-            <li>No false complaints</li>
-            </ul>
-            </section>
-            
-            <section id="p7">
-            <h2 class="text-xl text-white font-semibold">7. Data Security and Retention</h2>
-            
-            <h3 class="text-white mt-4 font-medium">Security</h3>
-            <ul class="list-disc pl-6">
-            <li>Encryption</li>
-            <li>Access control</li>
-            <li>Breach protocols</li>
-            </ul>
-            
-            <h3 class="text-white mt-4 font-medium">Retention</h3>
-            <ul class="list-disc pl-6">
-            <li>Starter: 30 days</li>
-            <li>Creator: 90 days</li>
-            <li>Studio: 365 days</li>
-            <li>Account data: up to 2 years</li>
-            </ul>
-            </section>
-            
-            <section id="p8">
-            <h2 class="text-xl text-white font-semibold">8. International Data Transfers</h2>
-            <p>Data may be processed outside India with DPDP compliance.</p>
-            </section>
-            
-            <section id="p9">
-            <h2 class="text-xl text-white font-semibold">9. Children's Privacy</h2>
-            <p>Not intended for users under 18.</p>
-            </section>
-            
-            <section id="p10">
-            <h2 class="text-xl text-white font-semibold">10. Contact and Updates</h2>
-            
-            <p><strong>Email:</strong> muralidhar@loka15.com</p>
-            <p><strong>Availability:</strong> Mon–Fri, 9 AM – 6 PM IST</p>
-            
-            <p class="mt-3">
-            Loka15 Studios<br>
-            Plot 120, Saradanagar<br>
-            Hyderabad, 500070, India
-            </p>
-            </section>
-            
+            <div class="w-full max-w-2xl text-gray-300 space-y-10 text-base md:text-lg leading-8">
+
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Privacy Policy for Loka15 Studios Platform
+                </h1>
+                <p class="text-gray-500">Last Updated: April 8, 2026</p>
+
+                <section id="p1" class="glass-panel p-6 md:p-8 space-y-4">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white tracking-tight">1. Introduction and Legal Basis
+                    </h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <p>Welcome to Loka15 Studios ("we", "us", or "our"). We operate the Loka15 Studios Platform, an
+                        AI-powered content creation service.</p>
+                    <p>We are committed to processing your personal data in compliance with the Digital Personal Data
+                        Protection (DPDP) Act, 2023 of India.</p>
+
+                    <ul class="list-disc pl-6 space-y-2 mt-3">
+                        <li><strong>Data Fiduciary:</strong> Loka15 Studios</li>
+                        <li><strong>Data Principal:</strong> You, the user</li>
+                        <li><strong>Consent:</strong> By using our service, you provide informed consent.</li>
+                    </ul>
+                </section>
+
+                <section id="p2" class="glass-panel p-5 md:p-6 space-y-4">
+                    <h2 class="text-xl text-white font-semibold">2. Personal Data We Collect</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <h3 class="text-white mt-4 font-medium">A. Account and Identity Data</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Name, email, username, password</li>
+                        <li>Profile details and preferences</li>
+                        <li>Contact and professional info</li>
+                    </ul>
+
+                    <h3 class="text-white mt-4 font-medium">B. Billing and Payment Data</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Payment details via third-party processors</li>
+                        <li>Transaction history and subscription data</li>
+                    </ul>
+
+                    <h3 class="text-white mt-4 font-medium">C. Content and Usage Data</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Generated images/videos</li>
+                        <li>Prompts and uploaded content</li>
+                        <li>Usage analytics and chat logs</li>
+                    </ul>
+
+                    <h3 class="text-white mt-4 font-medium">D. Technical Information</h3>
+                    <ul class="list-disc pl-6">
+                        <li>IP address, location</li>
+                        <li>Device and system data</li>
+                    </ul>
+
+                    <h3 class="text-white mt-4 font-medium">E. Third-Party Integrations</h3>
+                    <ul class="list-disc pl-6">
+                        <li>LinkedIn, Google, social logins</li>
+                    </ul>
+                </section>
+
+                <section id="p3" class="glass-panel p-5 md:p-6 space-y-4">
+                    <h2 class="text-xl text-white font-semibold">3. How We Use Your Information</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Service delivery and AI generation</li>
+                        <li>Billing and compliance</li>
+                        <li>Platform improvement</li>
+                        <li>Communication and support</li>
+                        <li>Legal and fraud protection</li>
+                    </ul>
+                </section>
+
+                <section id="p4" class="glass-panel p-5 md:p-6 space-y-4">
+                    <h2 class="text-xl text-white font-semibold">4. AI Model Training and Content Handling</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Your content remains your property</li>
+                        <li>No training without explicit consent</li>
+                        <li>Content moderation for safety</li>
+                    </ul>
+                </section>
+
+                <section id="p5" class="glass-panel p-5 md:p-6 space-y-4">
+                    <h2 class="text-xl text-white font-semibold">5. Data Sharing and Disclosure</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Payment processors</li>
+                        <li>Cloud infrastructure</li>
+                        <li>Analytics services</li>
+                        <li>Legal authorities</li>
+                        <li>Business transfers</li>
+                    </ul>
+                </section>
+
+                <section id="p6" class="glass-panel p-5 md:p-6 space-y-4">
+                    <h2 class="text-xl text-white font-semibold">6. Your Rights and Duties</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <h3 class="text-white mt-4 font-medium">Your Rights</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Access your data</li>
+                        <li>Correction & erasure</li>
+                        <li>Withdraw consent</li>
+                        <li>Grievance redressal</li>
+                    </ul>
+
+                    <h3 class="text-white mt-4 font-medium">Your Duties</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Provide authentic information</li>
+                        <li>Avoid impersonation</li>
+                        <li>No false complaints</li>
+                    </ul>
+                </section>
+
+                <section id="p7" class="glass-panel p-5 md:p-6 space-y-4">
+
+                    <h2 class="text-xl text-white font-semibold">7. Data Security and Retention</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <h3 class="text-white mt-4 font-medium">Security</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Encryption</li>
+                        <li>Access control</li>
+                        <li>Breach protocols</li>
+                    </ul>
+
+                    <h3 class="text-white mt-4 font-medium">Retention</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Starter: 30 days</li>
+                        <li>Creator: 90 days</li>
+                        <li>Studio: 365 days</li>
+                        <li>Account data: up to 2 years</li>
+                    </ul>
+                </section>
+
+                <section id="p8" class="glass-panel p-5 md:p-6 space-y-4">
+                    <h2 class="text-xl text-white font-semibold">8. International Data Transfers</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <p>Data may be processed outside India with DPDP compliance.</p>
+                </section>
+
+                <section id="p9" class="glass-panel p-5 md:p-6 space-y-4">
+                    <h2 class="text-xl text-white font-semibold">9. Children's Privacy</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <p>Not intended for users under 18.</p>
+                </section>
+
+                <section id="p10" class="glass-panel p-5 md:p-6 space-y-4">
+
+                    <h2 class="text-xl text-white font-semibold">10. Contact and Updates</h2>
+                    <div class="w-10 h-[2px] bg-purple-400/60 mb-2"></div>
+                    <p><strong>Email:</strong> muralidhar@loka15.com</p>
+                    <p><strong>Availability:</strong> Mon–Fri, 9 AM – 6 PM IST</p>
+
+                    <p class="mt-3">
+                        Loka15 Studios<br>
+                        Plot 120, Saradanagar<br>
+                        Hyderabad, 500070, India
+                    </p>
+                </section>
+
             </div>
-            </div>
+        </div>
     </div>
 </div>
 
@@ -579,7 +594,7 @@ class="fixed inset-0 bg-black/90 backdrop-blur-2xl hidden z-[1000] overflow-y-au
                         <h2 class="text-6xl font-bold tracking-tighter">Our Projects</h2>
                     </div>
                     <p class="max-w-xs text-gray-500 text-right">
-                        A curation of our recent ventures into animation and cinematic storytelling.
+                        These projects are now live, with several more stories already in production.
                     </p>
                 </div>
 
@@ -603,16 +618,16 @@ class="fixed inset-0 bg-black/90 backdrop-blur-2xl hidden z-[1000] overflow-y-au
                             <p class="text-gray-400 text-sm">Animation / Series</p>
                         </div>
                     </div>
-                    <!-- <div class="project-card reveal">
+                     <div class="project-card reveal">
                         <div class="vid-placeholder bg-zinc-900 border-2 border-dashed border-white/5 flex items-center justify-center">
-                            <span class="text-xs uppercase tracking-widest text-white/20">Untitled Alpha [In Prod]</span>
+                            <span class="text-xs uppercase tracking-widest text-white/20">COMMING SOON</span>
                         </div>
                         <div class="project-overlay">
-                            <h3 class="text-2xl font-bold">Project Alpha</h3>
-                            <p class="text-gray-400 text-sm">Confidential Development</p>
+                            <h3 class="text-2xl font-bold">Project Mitti</h3>
+                            <p class="text-gray-400 text-sm">The land remembers every fall</p>
                         </div>
                     </div>
-                    <div class="project-card reveal" style="transition-delay: 0.1s">
+                    <!--<div class="project-card reveal" style="transition-delay: 0.1s">
                         <div class="vid-placeholder bg-zinc-800 border-2 border-dashed border-white/5 flex items-center justify-center">
                             <span class="text-xs uppercase tracking-widest text-white/20">Untitled Beta [In Prod]</span>
                         </div>
@@ -651,23 +666,22 @@ class="fixed inset-0 bg-black/90 backdrop-blur-2xl hidden z-[1000] overflow-y-au
         </section>
 
         <footer
-    class="py-12 px-10 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest border-t border-white/5 bg-black">
+            class="py-12 px-10 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-widest border-t border-white/5 bg-black">
 
-    <div class="flex items-center gap-4 text-[10px] uppercase tracking-widest text-gray-600">
+            <div class="flex items-center gap-4 text-[10px] uppercase tracking-widest text-gray-600">
 
-        <p class="m-0 leading-none">
-            © 2026 Loka15 Studios Pvt Ltd
-        </p>
-    
-        <button id="open-privacy"
-            class="leading-none text-gray-600 hover:text-white transition-colors">
-            Privacy Policy
-        </button>
-    
-    </div>
+                <p class="m-0 leading-none">
+                    © 2026 Loka15 Studios Pvt Ltd
+                </p>
 
-    <p>Crafted in the Infinite Screen</p>
-</footer>
+                <button id="open-privacy" class="leading-none text-gray-600 hover:text-white transition-colors">
+                    Privacy Policy
+                </button>
+
+            </div>
+
+            <p>Crafted in the Infinite Screen</p>
+        </footer>
 
     </div>
 
@@ -1034,17 +1048,17 @@ class="fixed inset-0 bg-black/90 backdrop-blur-2xl hidden z-[1000] overflow-y-au
 
         // OPEN
         openPrivacy.addEventListener('click', () => {
-    privacyModal.classList.remove('hidden');
-    privacyModal.classList.add('flex'); // ✅ ADD THIS
-    document.body.classList.add('modal-active');
-});
+            privacyModal.classList.remove('hidden');
+            privacyModal.classList.add('flex'); // ✅ ADD THIS
+            document.body.classList.add('modal-active');
+        });
 
         // CLOSE
         closePrivacy.addEventListener('click', () => {
-    privacyModal.classList.add('hidden');
-    privacyModal.classList.remove('flex'); // ✅ ADD THIS
-    document.body.classList.remove('modal-active');
-});
+            privacyModal.classList.add('hidden');
+            privacyModal.classList.remove('flex'); // ✅ ADD THIS
+            document.body.classList.remove('modal-active');
+        });
         // CLICK OUTSIDE
         privacyModal.addEventListener('click', (e) => {
             if (e.target === privacyModal) {
